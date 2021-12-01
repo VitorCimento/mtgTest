@@ -1,0 +1,40 @@
+@import '@angular/material/theming';
+@include mat-core();
+
+@mixin body-theme($theme) {
+  $_background: map-get($theme, background);
+  $_color: map-get($theme, foreground);
+  $background: mat-color($_background, background);
+  $color: mat-color($_color, text);
+  $backgound2: mat-color($_background, card);
+
+  body {
+    background-color: $background;
+    color: $color;
+  }
+
+  $primary: mat-color(map-get($theme, primary));
+  $primary-text: mat-color(map-get($theme, primary), default-contrast);
+
+  $accent: mat-color(map-get($theme, accent));
+  $accent-text: mat-color(map-get($theme, accent), default-contrast);
+
+  $warn: mat-color(map-get($theme, warn));
+  $warn-text: mat-color(map-get($theme, warn), default-contrast);
+
+  :root {
+    --default-color: #{$color};
+
+    --primary: #{$primary};
+    --primary-text: #{$primary-text};
+
+    --accent: #{$accent};
+    --accent-text: #{$accent-text};
+
+    --warn: #{$warn};
+    --warn-text: #{$warn-text};
+
+    --background: #{$background};
+    --background2: #{$backgound2};
+  }
+}

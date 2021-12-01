@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'mixins';
+
+$custom-app-primary: mat-palette($mat-blue);
+$custom-app-accent:  mat-palette($mat-orange);
+$custom-app-warn:    mat-palette($mat-red, A700);
+$custom-theme: mat-light-theme($custom-app-primary,$custom-app-accent,$custom-app-warn);
+
+@include angular-material-theme($custom-theme);
+@include body-theme($custom-theme);

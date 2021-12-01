@@ -31,8 +31,57 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/styles/theme-blue-orange-dark.scss",
+                "bundleName": "theme-blue-orange-dark",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-blue-orange.scss",
+                "bundleName": "theme-blue-orange",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-deep-purple-amber.scss",
+                "bundleName": "theme-deep-purple-amber",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-indigo-pink.scss",
+                "bundleName": "theme-indigo-pink",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-pink-blue-gray-dark.scss",
+                "bundleName": "theme-pink-blue-gray-dark",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-purple-green-dark.scss",
+                "bundleName": "theme-purple-green-dark",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-mono-red.scss",
+                "bundleName": "theme-mono-red",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-mono-red-dark.scss",
+                "bundleName": "theme-mono-red-dark",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-mono-blue.scss",
+                "bundleName": "theme-mono-blue",
+                "inject": false
+              },
+              {
+                "input": "src/styles/theme-mono-blue-dark.scss",
+                "bundleName": "theme-mono-blue-dark",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -71,9 +120,14 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mtgTest:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "mtgTest:build:production"
+              "browserTarget": "mtgTest:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
               "browserTarget": "mtgTest:build:development"
@@ -100,7 +154,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
