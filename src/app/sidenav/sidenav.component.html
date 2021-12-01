@@ -25,6 +25,8 @@
         </button>
         <span routerLink="home">MTG App</span>
         <span class="spacer"></span>
+        <button mat-icon-button class="material-icons-round" (click)="darkModeToogle()" *ngIf="getDarkMode()"><mat-icon>light_mode</mat-icon></button>
+        <button mat-icon-button class="material-icons-round" (click)="darkModeToogle()" *ngIf="!getDarkMode()"><mat-icon>dark_mode</mat-icon></button>
         <app-theme-menu></app-theme-menu>
       </mat-toolbar>
       <router-outlet></router-outlet>

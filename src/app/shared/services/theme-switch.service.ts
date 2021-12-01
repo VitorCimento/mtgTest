@@ -14,17 +14,15 @@ export interface Theme {
 })
 export class ThemeSwitchService {
   private readonly THEMES: Theme[] = [
-    { name: 'mono-red'           , display: 'Mono Red'                             , icon: 'R' },
-    { name: 'mono-red-dark'      , display: 'Mono Red (Modo Escuro)'               , icon: 'R' },
-    { name: 'mono-blue'          , display: 'Mono Blue'                            , icon: 'U' },
-    { name: 'mono-blue-dark'     , display: 'Mono Blue (Modo Escuro)'              , icon: 'U' },
+    { name: 'mono-red' , display: 'Mono Red' , icon: 'R' },
+    { name: 'mono-blue', display: 'Mono Blue', icon: 'U' },
   ];
 
   private _mainTheme$: BehaviorSubject<string> = new BehaviorSubject('blue-orange');
   private _renderer: Renderer2;
   private head: HTMLElement;
   private themeLinks: HTMLElement[] = [];
-  private restoreTheme: boolean = true;
+  private isDarkMode: boolean = false;
 
   theme$: Observable<[string]>;
 
@@ -34,6 +32,7 @@ export class ThemeSwitchService {
   ) {
     this.head = document.head;
     this._renderer = rendererFactory.createRenderer(null, null);
+    this.isDarkMode = localStorage.getItem('darkMode') ? JSON.parse(localStorage.getItem('darkMode')!) === true : false;
 
     if( localStorage.getItem('currentTheme') ) {
       this.setMainTheme(localStorage.getItem('currentTheme')!);
@@ -51,6 +50,14 @@ export class ThemeSwitchService {
   }
 
   setMainTheme(name: string) {
+    const position = name.indexOf('-dark');
+
+    if (this.isDarkMode) {
+      name = position > -1 ? name : `${name}-dark`;
+    } else {
+      name = position > -1 ? name.slice(0, position) : name;
+    }
+
     this._mainTheme$.next(name);
   }
 
@@ -58,8 +65,24 @@ export class ThemeSwitchService {
     return this._mainTheme$.value;
   }
 
+  darkModeToogle() {
+    this.isDarkMode = !this.isDarkMode;
+    localStorage.setItem('darkMode', this.isDarkMode ? 'true' : 'false');
+    // let theme = this.getCurrentTheme();
+    // const position = theme.indexOf('-dark');
+
+    // theme = position > 0 ? theme.slice(0, position) : `${theme}-dark`;
+
+    // this.setMainTheme(theme);
+    this.setMainTheme(this.getCurrentTheme());
+  }
+
   getThemeList() {
     return this.THEMES;
+  }
+
+  getDarkMode(): boolean {
+    return this.isDarkMode;
   }
 
   getLightThemesList() {
