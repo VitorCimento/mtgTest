@@ -14,12 +14,6 @@ export interface Theme {
 })
 export class ThemeSwitchService {
   private readonly THEMES: Theme[] = [
-    { name: 'blue-orange'        , display: 'Azul & Laranja'                       },
-    { name: 'blue-orange-dark'   , display: 'Azul & Laranja (Modo Escuro)'         },
-    { name: 'deep-purple-amber'  , display: 'Roxo & Âmbar'                         },
-    { name: 'indigo-pink'        , display: 'Índigo & Pink'                        },
-    { name: 'pink-blue-gray-dark', display: 'Pink & Azul Acizentado (Modo Escuro)' },
-    { name: 'purple-green-dark'  , display: 'Roxo & Verde (Modo Escuro)'           },
     { name: 'mono-red'           , display: 'Mono Red'                             , icon: 'R' },
     { name: 'mono-red-dark'      , display: 'Mono Red (Modo Escuro)'               , icon: 'R' },
     { name: 'mono-blue'          , display: 'Mono Blue'                            , icon: 'U' },

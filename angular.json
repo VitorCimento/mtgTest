@@ -33,36 +33,6 @@
             "styles": [
               "src/styles.scss",
               {
-                "input": "src/styles/theme-blue-orange-dark.scss",
-                "bundleName": "theme-blue-orange-dark",
-                "inject": false
-              },
-              {
-                "input": "src/styles/theme-blue-orange.scss",
-                "bundleName": "theme-blue-orange",
-                "inject": false
-              },
-              {
-                "input": "src/styles/theme-deep-purple-amber.scss",
-                "bundleName": "theme-deep-purple-amber",
-                "inject": false
-              },
-              {
-                "input": "src/styles/theme-indigo-pink.scss",
-                "bundleName": "theme-indigo-pink",
-                "inject": false
-              },
-              {
-                "input": "src/styles/theme-pink-blue-gray-dark.scss",
-                "bundleName": "theme-pink-blue-gray-dark",
-                "inject": false
-              },
-              {
-                "input": "src/styles/theme-purple-green-dark.scss",
-                "bundleName": "theme-purple-green-dark",
-                "inject": false
-              },
-              {
                 "input": "src/styles/theme-mono-red.scss",
                 "bundleName": "theme-mono-red",
                 "inject": false
