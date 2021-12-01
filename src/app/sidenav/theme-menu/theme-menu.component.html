@@ -3,7 +3,7 @@
 </button>
 <mat-menu #themeMenu="matMenu" yPosition="above">
   <button mat-button *ngFor="let theme of themes" (click)=changeTheme(theme.name)>
-    <mat-icon class="mat-18">ligature</mat-icon>
+    <mat-icon *ngIf="theme.icon" svgIcon="{{theme.icon}}"></mat-icon>
     {{theme.display}}
   </button>
 </mat-menu>

@@ -20,10 +20,10 @@ export class ThemeSwitchService {
     { name: 'indigo-pink'        , display: 'Índigo & Pink'                        },
     { name: 'pink-blue-gray-dark', display: 'Pink & Azul Acizentado (Modo Escuro)' },
     { name: 'purple-green-dark'  , display: 'Roxo & Verde (Modo Escuro)'           },
-    { name: 'mono-red'           , display: 'Mono Red'                             , icon: 'R.svg' },
-    { name: 'mono-red-dark'      , display: 'Mono Red (Modo Escuro)'               , icon: 'R.svg' },
-    { name: 'mono-blue'          , display: 'Mono Blue'                            , icon: 'U.svg' },
-    { name: 'mono-blue-dark'     , display: 'Mono Blue (Modo Escuro)'              , icon: 'U.svg' },
+    { name: 'mono-red'           , display: 'Mono Red'                             , icon: 'R' },
+    { name: 'mono-red-dark'      , display: 'Mono Red (Modo Escuro)'               , icon: 'R' },
+    { name: 'mono-blue'          , display: 'Mono Blue'                            , icon: 'U' },
+    { name: 'mono-blue-dark'     , display: 'Mono Blue (Modo Escuro)'              , icon: 'U' },
   ];
 
   private _mainTheme$: BehaviorSubject<string> = new BehaviorSubject('blue-orange');

@@ -1,3 +1,4 @@
+import { IconModule } from './../modules/icon.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../modules/material.module';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    IconModule
   ],
   // declarations: sharedComponents,
   exports: [MaterialModule, FlexLayoutModule]
