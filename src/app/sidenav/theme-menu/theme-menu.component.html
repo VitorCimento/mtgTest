@@ -1,0 +1,9 @@
+<button mat-icon-button aria-label="Temas" [matMenuTriggerFor]="themeMenu">
+  <mat-icon fontSet="material-icons-round">format_color_fill</mat-icon>
+</button>
+<mat-menu #themeMenu="matMenu" yPosition="above">
+  <button mat-button *ngFor="let theme of themes" (click)=changeTheme(theme.name)>
+    <mat-icon class="mat-18">ligature</mat-icon>
+    {{theme.display}}
+  </button>
+</mat-menu>
