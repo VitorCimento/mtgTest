@@ -1,6 +1,7 @@
 {
-  "/": {
+  "/api": {
     "target": "https://api.scryfall.com",
-    "secure": true
+    "secure": true,
+    "pathRewrite": {"^/api" : ""}
   }
 }

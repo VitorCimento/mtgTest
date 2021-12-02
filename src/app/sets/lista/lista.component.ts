@@ -1,3 +1,4 @@
+import { MessagesService } from './../../shared/services/messages.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private msgService: MessagesService) { }
 
   ngOnInit(): void {
   }

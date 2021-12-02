@@ -3,7 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface ConfirmData {
   title?: string;
-  question: string;
+  question: string[];
   captionOk?: string;
   captionCancel?: string;
   colorOk?: string;
