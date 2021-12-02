@@ -1,0 +1,13 @@
+<div class="title-box {{data.class || ''}}">
+  <h2 mat-dialog-title class="title">{{data.title || ''}}</h2>
+</div>
+<div class="message">
+  <mat-dialog-content class="mat-typography">
+    <p class="p-message" *ngFor="let msg of data.message">
+      {{msg}}
+    </p>
+  </mat-dialog-content>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close cdkFocusInitial color="{{data.class || ''}}">Fechar</button>
+</mat-dialog-actions>

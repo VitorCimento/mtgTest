@@ -1,0 +1,10 @@
+<h1 matDialogTitle color="primary">{{data.title}}</h1>
+<mat-dialog-content>
+  <p *ngFor="let msg of data.question">
+    {{msg}}
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-raised-button color='{{data.colorCancel || "warn"}}' [mat-dialog-close]='false'>{{data.captionCancel || "Não"}}</button>
+  <button mat-raised-button color='{{data.colorOk || "primary"}}' cdkFocusInitial [mat-dialog-close]="true">{{data.captionOk || "Sim"}}</button>
+</mat-dialog-actions>
