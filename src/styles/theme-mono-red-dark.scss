@@ -2,7 +2,7 @@
 @import 'mixins';
 
 $custom-app-primary: mat-palette($mat-deep-orange, 900);
-$custom-app-accent:  mat-palette($mat-red, A200);
+$custom-app-accent:  mat-palette($mat-red, 300);
 
 $custom-dark-theme: mat-dark-theme($custom-app-primary, $custom-app-accent);
 

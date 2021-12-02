@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'mixins';
 
-$custom-app-primary: mat-palette($mat-indigo, 900);
+$custom-app-primary: mat-palette($mat-yellow, 100);
 $custom-app-accent:  mat-palette($mat-indigo, 400);
 
 $custom-dark-theme: mat-dark-theme($custom-app-primary, $custom-app-accent);

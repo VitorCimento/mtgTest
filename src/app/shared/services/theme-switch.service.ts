@@ -14,8 +14,29 @@ export interface Theme {
 })
 export class ThemeSwitchService {
   private readonly THEMES: Theme[] = [
-    { name: 'mono-red' , display: 'Mono Red' , icon: 'R' },
-    { name: 'mono-blue', display: 'Mono Blue', icon: 'U' },
+    { name: 'mono-red'     , display: 'Mono Red'              , icon: 'R'  },
+    { name: 'mono-blue'    , display: 'Mono Blue'             , icon: 'U'  },
+    { name: 'mono-green'   , display: 'Mono Green'            , icon: 'G'  },
+    { name: 'mono-white'   , display: 'Mono White'            , icon: 'W'  },
+    { name: 'mono-black'   , display: 'Mono Black'            , icon: 'B'  },
+    { name: 'golgari-bdom' , display: 'Golgari (B Dominante)' , icon: 'BG' },
+    { name: 'golgari-gdom' , display: 'Golgari (G Dominante)' , icon: 'BG' },
+    { name: 'rakdos-bdom'  , display: 'Rakdos (B Dominante)'  , icon: 'BR' },
+    { name: 'rakdos-rdom'  , display: 'Rakdos (R Dominante)'  , icon: 'BR' },
+    { name: 'selesnya-gdom', display: 'Selesnya (G Dominante)', icon: 'GW' },
+    { name: 'selesnya-wdom', display: 'Selesnya (W Dominante)', icon: 'GW' },
+    { name: 'gruul-rdom'   , display: 'Gruul (R Dominante)'   , icon: 'RG' },
+    { name: 'gruul-gdom'   , display: 'Gruul (G Dominante)'   , icon: 'RG' },
+    { name: 'boros-rdom'   , display: 'Boros (R Dominante)'   , icon: 'RW' },
+    { name: 'boros-wdom'   , display: 'Boros (W Dominante)'   , icon: 'RW' },
+    { name: 'dimir-udom'   , display: 'Dimir (U Dominante)'   , icon: 'UB' },
+    { name: 'dimir-bdom'   , display: 'Dimir (P Dominante)'   , icon: 'UB' },
+    { name: 'izzet-udom'   , display: 'Izzet (U Dominante)'   , icon: 'UR' },
+    { name: 'izzet-rdom'   , display: 'Izzet (R Dominante)'   , icon: 'UR' },
+    { name: 'orzhov-wdom'  , display: 'Orzhov (W Dominante)'  , icon: 'WB' },
+    { name: 'orzhov-bdom'  , display: 'Orzhov (B Dominante)'  , icon: 'WB' },
+    { name: 'azorius-wdom' , display: 'Azorius (W Dominante)' , icon: 'WU' },
+    { name: 'azorius-udom' , display: 'Azorius (U Dominante)' , icon: 'WU' },
   ];
 
   private _mainTheme$: BehaviorSubject<string> = new BehaviorSubject('blue-orange');
