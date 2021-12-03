@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CommonModule } from '@angular/common';
-
-import { SetsRoutingModule } from './sets-routing.module';
-import { SharedModule } from '../shared/shared.module';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { SharedModule } from '../shared/shared.module';
 import { ListaComponent } from './lista/lista.component';
+import { SetsRoutingModule } from './sets-routing.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ListaComponent } from './lista/lista.component';
     CommonModule,
     SetsRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollingModule
   ]
 })
 export class SetsModule { }
