@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-export interface Set {
+export interface MtgSet {
   object: string;
   id: string;
   code: string;
@@ -26,10 +26,10 @@ export interface Set {
   search_uri: string;
 }
 
-export interface AllSets {
+export interface MtgAllSets {
   object: string;
   has_more: boolean;
-  data: Set[];
+  data: MtgSet[];
 }
 
 @Injectable({
@@ -41,7 +41,7 @@ export class SetsService {
 
   constructor(protected http: HttpClient) { }
 
-  all(): Observable<AllSets> {
-    return this.http.get<AllSets>(`${this.API}/${this.subUrl}`);
+  all(): Observable<MtgAllSets> {
+    return this.http.get<MtgAllSets>(`${this.API}/${this.subUrl}`);
   }
 }

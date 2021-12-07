@@ -1,7 +1,15 @@
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
+
+.drk-mode {
+  filter: invert(99%) sepia(7%) saturate(312%) hue-rotate(24deg) brightness(116%) contrast(100%);
+}
+
+// img:hover {
+
+// }
 
 .div-table-sets {
   max-width: 100%;;
@@ -13,6 +21,14 @@
 
   .mat-cell {
     padding: 8px 8px 8px 0;
+  }
+}
+
+.mat-row:hover {
+  img{
+    // filter: invert(74%) sepia(81%) saturate(454%) hue-rotate(14deg) brightness(108%) contrast(104%);
+    // filter: invert(89%) sepia(18%) saturate(1567%) hue-rotate(66deg) brightness(97%) contrast(87%);
+    filter: invert(49%) sepia(25%) saturate(873%) hue-rotate(158deg) brightness(94%) contrast(86%);
   }
 }
 

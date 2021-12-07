@@ -55,8 +55,8 @@ export class ThemeSwitchService {
     this._renderer = rendererFactory.createRenderer(null, null);
     this.isDarkMode = localStorage.getItem('darkMode') ? JSON.parse(localStorage.getItem('darkMode')!) === true : false;
 
-    if( localStorage.getItem('currentTheme') ) {
-      this.setMainTheme(localStorage.getItem('currentTheme')!);
+    if( localStorage.getItem('actualTheme') ) {
+      this.setMainTheme(localStorage.getItem('actualTheme')!);
     }
 
     this.theme$ = combineLatest([this._mainTheme$]);
@@ -132,7 +132,7 @@ export class ThemeSwitchService {
       this._renderer.setProperty(linkEl, 'onload', resolve);
       this._renderer.appendChild(this.head, linkEl);
       this.themeLinks = [...this.themeLinks, linkEl];
-      localStorage.setItem('currentTheme', themeName);
+      localStorage.setItem('actualTheme', themeName);
     })
   }
 
